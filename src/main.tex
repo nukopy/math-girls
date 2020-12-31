@@ -1,8 +1,18 @@
-\documentclass[uplatex]{jsarticle}
+\documentclass[a4j,uplatex,11pt]{jsarticle}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% package
+\usepackage{fancyhdr}
 \usepackage{float}
-\usepackage[dvipdfmx]{hyperref, graphicx}
-\usepackage{pxjahyper}
+\usepackage[dvipdfmx]{graphicx, hyperref}
+\usepackage{pxjahyper}  % hyperref: link for Japanese href
+\usepackage[top=20truemm,bottom=20truemm,left=20truemm,right=20truemm]{geometry}
+
+% package settings
+% - hyperref
 \hypersetup{
 	colorlinks=false, % リンクに色をつけない設定
 	bookmarks=true, % 以下ブックマークに関する設定
@@ -10,24 +20,131 @@
 	pdfborder={0 0 0},
 	bookmarkstype=toc,
 }
-\newcommand{\linedhref}[2]{\underline{\href{#1}{\emph{#2}}}}
+
+% macro
+\newcommand{\linedhref}[2]{\underline{\href{#1}{#2}}}
+\renewcommand\thefootnote{\arabic{footnote})}  % 脚注
+
+% page style
+\pagestyle{fancy}
+\lhead{}
+
+% title
+\title{数学ガール 読書ノート}
+\author{@pyteyon}
+\date{2020/12/31 -}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
-吾輩は猫である。名前はまだ無い\cite{Soseki1905}。
+\maketitle
+\thispagestyle{empty}
 
-どこで生れたかとんと見当がつかぬ。
-何でも薄暗いじめじめした所で
-ニャーニャー泣いていた事だけは記憶している。
-吾輩はここで始めて人間というものを見た。
+% 目次
+\tableofcontents
+\newpage
 
-\begin{figure}[H]
-    \begin{center}
-      \includegraphics[height=10cm]{img/natsume_soseki.jpeg}      
-      \caption{夏目漱石の写真（引用元：\linedhref{https://ja.wikipedia.org/wiki/\%E5\%A4\%8F\%E7\%9B\%AE\%E6\%BC\%B1\%E7\%9F\%B3}{夏目漱石 - Wikipedia}）}
-    \end{center}
-\end{figure}
+% contents
+\part*{はじめに}
 
+\section{本ノートの目的}
+
+本ノートの目的は筆者の数学力（という名の何か）の向上である．\\
+
+筆者は数学が大の苦手である．受験では数 2B までしか使っておらず，かつ大学入試では 3 割取れれば良い方，というくらい数学が苦手である．
+そのため，数学ガールを通して数学に対する感覚，考え方のベースを作りたいと考えている．\\
+
+本ノートでは，数学ガールを読む際に浮かんだ疑問点，引っかかった点，覚えておきたいことなど，勉強を通じて考えたことを中心に記録していく．
+
+\section{数学ガールとは}
+
+数学ガールには以下二つのシリーズがある．
+
+\begin{itemize}
+	\item 「数学ガール」シリーズ
+	\item 「数学ガールの秘密ノート」シリーズ
+\end{itemize}
+
+それぞれの概要は以下の通り．
+
+\underline{「数学ガール」シリーズ}
+
+\begin{quotation}
+	「数学ガール」シリーズは，
+
+	高校生の「僕」が数学ガールたちと数学に取り組む物語です．
+
+	読み物形式でありながら，取り扱う数学的内容は本格的．
+
+	ひとあじ違う数学にチャレンジしてみませんか．
+
+	学生さんから社会人まで大人気！
+
+	コミックスも英語版もあります．
+
+	もちろん，電子書籍も！
+
+	（引用元：\linedhref{https://www.hyuki.com/girl/}{著者の書籍説明の Web ページ}）
+\end{quotation}
+
+\underline{「数学ガールの秘密ノート」シリーズ}
+
+\begin{quotation}
+	「数学ガールの秘密ノート」シリーズは，
+
+	対話形式でやさしい数学に取り組む物語です．
+
+	高校生の「僕」，高校生のミルカさんやテトラちゃん，
+
+	中学生のユーリといっしょに数学に触れてみましょう．
+
+	中学生・高校生が数学に親しむのにぴったり！
+
+	どの巻からでも読めますよ．
+
+	英語版もあります．
+
+	もちろん，電子書籍も！
+
+	（引用元：\linedhref{https://www.hyuki.com/girl/}{著者の書籍説明の Web ページ}）
+\end{quotation}
+
+% 「数学ガール」シリーズ
+\part{「数学ガール」シリーズ}
+
+\section{数学ガール}
+\section{数学ガール フェルマーの最終定理}
+\section{数学ガール ゲーデルの不完全性定理}
+\section{数学ガール 乱択アルゴリズム}
+\section{数学ガール ガロア理論}
+\section{数学ガール ポアンカレ予想}
+
+\newpage
+
+% 「数学ガールの秘密ノート」シリーズ
+\part{「数学ガールの秘密ノート」シリーズ}
+
+\section{数学ガールの秘密ノート 式とグラフ}
+\section{数学ガールの秘密ノート 整数で遊ぼう}
+\section{数学ガールの秘密ノート 丸い三角形}
+\section{数学ガールの秘密ノート 数列の広場}
+\section{数学ガールの秘密ノート 微分を追いかけて}
+\section{数学ガールの秘密ノート ベクトルの真実}
+\section{数学ガールの秘密ノート 場合の和}
+\section{数学ガールの秘密ノート やさしい統計}
+\section{数学ガールの秘密ノート 積分を見つめて}
+\section{数学ガールの秘密ノート 行列が描くもの}
+\section{数学ガールの秘密ノート ビットとバイナリー}
+\section{数学ガールの秘密ノート 学ぶための対話}
+\section{数学ガールの秘密ノート 複素数の広がり}
+\section{数学ガールの秘密ノート 確率の冒険}
+
+\newpage
+
+% 参考文献
 \bibliography{ref}
 \bibliographystyle{junsrt}
 
